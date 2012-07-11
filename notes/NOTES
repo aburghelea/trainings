@@ -56,3 +56,6 @@ factory.preInstantiateSingletons();
 
 Ierarhie de XML-uri de configurare
 in doua XML-uri pot exista cu acelasi nume de bean, cel de al doilea suprascriindul pe primul
+
+Cand cream resurse manual Factory-uri definim relativ la un pachet
+cu application context 
