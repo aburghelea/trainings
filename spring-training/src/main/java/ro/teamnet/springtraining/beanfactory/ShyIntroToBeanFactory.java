@@ -3,6 +3,7 @@ package ro.teamnet.springtraining.beanfactory;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
+import ro.teamnet.springtraining.TheGreedyCapitalist;
 
 /**
  * Spring training by Gnomix
@@ -16,7 +17,7 @@ public class ShyIntroToBeanFactory {
     public static void main(String[] args) {
         final ClassPathResource resource = new ClassPathResource("capitalists.xml", ShyIntroToBeanFactory.class);
 
-        BeanFactory beanFactory =
-                new XmlBeanFactory(resource);
+        BeanFactory beanFactory = new XmlBeanFactory(resource);
+        final TheGreedyCapitalist capitalist = beanFactory.getBean("capitalist", TheGreedyCapitalist.class);
     }
 }
