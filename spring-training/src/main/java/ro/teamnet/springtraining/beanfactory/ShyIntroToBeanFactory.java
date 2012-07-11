@@ -19,5 +19,10 @@ public class ShyIntroToBeanFactory {
 
         BeanFactory beanFactory = new XmlBeanFactory(resource);
         final TheGreedyCapitalist capitalist = beanFactory.getBean("capitalist", TheGreedyCapitalist.class);
+        /*
+        getBean(Class) -> aduce beanul care e definit UNIC de tipul asta , arunca NoSuchBeanException
+        final TheGreedyCapitalist capitalist = beanFactory.getBean(TheGreedyCapitalist.class);
+        */
+        capitalist.doSomethingSchemency();
     }
 }

@@ -27,3 +27,7 @@ Subiecte Spring
 
 
 DIC -> getBean("...") asamblata cu toate dependintele
+
+//TODO: interfete package protected ???
+
+getBean(Class) -> aduce beanul care e definit UNIC de tipul asta , arunca NoSuchBeanException

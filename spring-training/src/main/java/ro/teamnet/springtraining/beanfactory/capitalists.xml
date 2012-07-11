@@ -5,7 +5,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--Bean Definition by XML-->
-    <bean id="capitalist"  class="ro.teamnet.springtraining.TheGreedyCapitalist" c:chineseDude-ref="worker" />
+    <bean id="capitalist" class="ro.teamnet.springtraining.TheGreedyCapitalist" c:chineseDude-ref="worker" />
+    <bean id="capitalist2" class="ro.teamnet.springtraining.TheGreedyCapitalist" c:chineseDude-ref="worker" />
+        <!--<constructor-arg ref="worker"/>-->
+    <!--</bean>-->
 
     <bean id="worker" class="ro.teamnet.springtraining.TheLittleDevilDoingTheRealWork"/>
 </beans>
