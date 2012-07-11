@@ -10,17 +10,15 @@ package ro.teamnet.springtraining;
 public class TheGreedyCapitalist {
     /**
      * package protect (without modifier)
-     * It's solid class
-     * TODO: refactor to interface (only if needed)
      */
     Worker chineseDude;
 
-//    public TheGreedyCapitalist() {
-//        // and now it's hardoded again;
-//        this.chineseDude = new TheLittleDevilDoingTheRealWork();
-//    }
+    private TheGreedyCapitalist() {
+        System.out.println("You're doing setting with me !?");
+    }
 
     public TheGreedyCapitalist(Worker chineseDude) {
+        System.out.println("Ctor injection");
         this.chineseDude = chineseDude;
     }
 
@@ -29,10 +27,17 @@ public class TheGreedyCapitalist {
         chineseDude.doTheShit("TheGreedyCapitalist.java: The shit");
     }
 
-//    public static void main(String[] args) {
-//        new TheGreedyCapitalist(
-//                Worker.NO_OP_WORKER
-//        ).doSomethingSchemency();
-//
-//    }
+    public void setChineseDude(Worker chineseDude) {
+        System.out.println("Setter injection");
+        this.chineseDude = chineseDude;
+    }
+
+/*
+    public static void main(String[] args) {
+        new TheGreedyCapitalist(
+                Worker.NO_OP_WORKER
+        ).doSomethingSchemency();
+
+    }
+*/
 }

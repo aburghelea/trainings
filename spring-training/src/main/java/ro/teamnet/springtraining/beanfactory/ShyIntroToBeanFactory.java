@@ -18,11 +18,15 @@ public class ShyIntroToBeanFactory {
         final ClassPathResource resource = new ClassPathResource("capitalists.xml", ShyIntroToBeanFactory.class);
 
         BeanFactory beanFactory = new XmlBeanFactory(resource);
-        final TheGreedyCapitalist capitalist = beanFactory.getBean("capitalist", TheGreedyCapitalist.class);
+        /*final TheGreedyCapitalist capitalist = beanFactory.getBean("capitalist", TheGreedyCapitalist.class);*/
+
         /*
         getBean(Class) -> aduce beanul care e definit UNIC de tipul asta , arunca NoSuchBeanException
         final TheGreedyCapitalist capitalist = beanFactory.getBean(TheGreedyCapitalist.class);
         */
-        capitalist.doSomethingSchemency();
+
+        final TheGreedyCapitalist capitalist_with_setter = beanFactory.getBean("capitalist_mix", TheGreedyCapitalist.class);
+//        capitalist.doSomethingSchemency();
+        capitalist_with_setter.doSomethingSchemency();
     }
 }
