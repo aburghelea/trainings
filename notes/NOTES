@@ -31,3 +31,28 @@ DIC -> getBean("...") asamblata cu toate dependintele
 //TODO: interfete package protected ???
 
 getBean(Class) -> aduce beanul care e definit UNIC de tipul asta , arunca NoSuchBeanException
+
+
+Scoping | Ierarhii de Containere IoC/Spring
+
+Ierarhizare de BeanFactory
+
+scope (default singleton)
+        singleton => o singura instanta per bean-definition / per BeanFactory / per ClassLoaderul folosit
+        prototype => per getBean se furnizeaza o instanta noua
+        request => per request web se creaza;
+        session => per intreaga sesiune cu dezvoltator
+        globabalSession => portleti
+        CUSTOM => definit
+		
+abstract 
+		marcheaza ca un bean ca fiind template de configurare
+	
+lazy-init 
+beanFactory-urile NU preinitializeaza bean-urile singleton => se poate folosi 
+ConfigurableListFactory factory ...
+factory.preInstantiateSingletons();
+
+
+Ierarhie de XML-uri de configurare
+in doua XML-uri pot exista cu acelasi nume de bean, cel de al doilea suprascriindul pe primul

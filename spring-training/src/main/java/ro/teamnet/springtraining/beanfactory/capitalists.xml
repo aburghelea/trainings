@@ -12,14 +12,22 @@
     <description>
         Bean Definition by XML
     </description>
+    <!--
+        scope e default singleton
+        singleton => o singura instanta per bean-definition / per BeanFactory / per ClassLoaderul folosit
+        prototype => per getBean se furnizeaza o instanta noua
+        request => per request web se creaza;
+        session => per intreaga sesiune cu dezvoltator
+        globabalSession => portleti
+        CUSTOM => definit
+     -->
     <bean id="capitalist" class="ro.teamnet.springtraining.TheGreedyCapitalist" c:chineseDude-ref="worker"
-          scope="singleton"/>
+          scope="prototype"/>
 
     <!--Using setter injection-->
     <!--Verbose setter injection-->
     <bean id="capitalist_with_setter" class="ro.teamnet.springtraining.TheGreedyCapitalist">
         <property name="chineseDude" ref="worker"/>
-
     </bean>
 
     <!--Light setter injection-->
@@ -31,8 +39,21 @@
           c:chineseDude-ref="worker">
         <property name="chineseDude" ref="worker"/>
     </bean>
+    <!-- Use case: multiple objects havin n constant properties and m that vary -->
+    <!-- Used as a configuration template -->
+    <bean id="capitalist_abstract" class="ro.teamnet.springtraining.TheGreedyCapitalist" abstract="true">
+        <property name="chineseDude" ref="worker"/>
+    </bean>
 
+    <!-- Use the above pattern and defines extra stuff -->
+    <bean id="capitalist_concret" parent="capitalist_abstract" p:country="ROMANIA"/>
+    <bean id="capitalist_concret2" parent="capitalist_abstract" p:country="CHINA" depends-on=""/>
 
+    <!-- Duplicate for hierarchy -->
+    <bean id="duplicateDefinitionBothInParentAsInChild" class="ro.teamnet.springtraining.TheGreedyCapitalist"
+          c:chineseDude-ref="worker"/>
+
+    <!-- This is our chinese guy -->
     <bean id="worker" class="ro.teamnet.springtraining.TheLittleDevilDoingTheRealWork"/>
 
 </beans>
