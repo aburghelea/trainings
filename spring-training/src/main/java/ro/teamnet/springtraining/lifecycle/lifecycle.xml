@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:c="http://www.springframework.org/schema/c"
        xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <description>
+        Lifecycle Hooks
+    </description>
 
-    <bean id="dependencyOne" class="ro.teamnet.springtraining.DependencyOne"
-          c:dependencyTwo-ref="dependencyTwo" />
-
-
-    <bean id="dependencyTwo" class="ro.teamnet.springtraining.DependencyTwo"
-          p:dependencyOne-ref="dependencyOne" depends-on="dependencyOne"/>
-
+    <bean id="gogu" class="ro.teamnet.springtraining.lifecycle.SomeBean" p:name="Gogu" init-method="doInit" destroy-method="doDestory"/>
 </beans>

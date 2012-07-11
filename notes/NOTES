@@ -29,6 +29,7 @@ Subiecte Spring
 DIC -> getBean("...") asamblata cu toate dependintele
 
 //TODO: interfete package protected ???
+//TODO: Dependente circulare cu constructor
 
 getBean(Class) -> aduce beanul care e definit UNIC de tipul asta , arunca NoSuchBeanException
 
@@ -57,5 +58,6 @@ factory.preInstantiateSingletons();
 Ierarhie de XML-uri de configurare
 in doua XML-uri pot exista cu acelasi nume de bean, cel de al doilea suprascriindul pe primul
 
-Cand cream resurse manual Factory-uri definim relativ la un pachet
-cu application context 
+Cand cream resurse manual Factory-uri definim relativ la un pachet, cu application context se uita in classpath*
+
+AbstracApplicationContext e de baza. maj appCtx deriva din el.

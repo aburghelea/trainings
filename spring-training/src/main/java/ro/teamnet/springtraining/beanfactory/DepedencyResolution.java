@@ -1,6 +1,7 @@
 package ro.teamnet.springtraining.beanfactory;
 
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
+import ro.teamnet.springtraining.DependencyOne;
 
 /**
  * Spring training by Gnomix
