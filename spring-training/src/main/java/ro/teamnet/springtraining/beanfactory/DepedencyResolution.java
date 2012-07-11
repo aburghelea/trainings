@@ -1,7 +1,6 @@
 package ro.teamnet.springtraining.beanfactory;
 
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import ro.teamnet.springtraining.DependencyOne;
 
 /**
  * Spring training by Gnomix
@@ -13,7 +12,8 @@ import ro.teamnet.springtraining.DependencyOne;
 public class DepedencyResolution {
 
     public static void main(String[] args) {
-        ConfigurableListableBeanFactory factory = BeanFactories.from("circulaDependencies.xml", DependencyOne.class);
+        // TODO: make this work
+        ConfigurableListableBeanFactory factory = BeanFactories.from("circulaDependencies.xml", DepedencyResolution.class);
         factory.getBean("dependencyOne");
     }
 

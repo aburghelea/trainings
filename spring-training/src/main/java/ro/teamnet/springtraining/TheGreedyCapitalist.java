@@ -42,12 +42,9 @@ public class TheGreedyCapitalist {
                 '}';
     }
 
-    /*
-        public static void main(String[] args) {
-            new TheGreedyCapitalist(
-                    Worker.NO_OP_WORKER
-            ).doSomethingSchemency();
-
-        }
-    */
+    public static void main(String[] args) {
+        new TheGreedyCapitalist(
+                Worker.NO_OP_WORKER
+        ).doSomethingSchemency();
+    }
 }
