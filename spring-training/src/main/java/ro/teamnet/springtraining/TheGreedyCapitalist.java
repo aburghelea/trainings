@@ -15,10 +15,10 @@ public class TheGreedyCapitalist {
      */
     Worker chineseDude;
 
-    public TheGreedyCapitalist() {
-        // and now it's hardoded again;
-        this.chineseDude = new TheLittleDevilDoingTheRealWork();
-    }
+//    public TheGreedyCapitalist() {
+//        // and now it's hardoded again;
+//        this.chineseDude = new TheLittleDevilDoingTheRealWork();
+//    }
 
     public TheGreedyCapitalist(Worker chineseDude) {
         this.chineseDude = chineseDude;
@@ -29,10 +29,10 @@ public class TheGreedyCapitalist {
         chineseDude.doTheShit("TheGreedyCapitalist.java: The shit");
     }
 
-    public static void main(String[] args) {
-        new TheGreedyCapitalist(
-                Worker.NO_OP_WORKER
-        ).doSomethingSchemency();
-
-    }
+//    public static void main(String[] args) {
+//        new TheGreedyCapitalist(
+//                Worker.NO_OP_WORKER
+//        ).doSomethingSchemency();
+//
+//    }
 }
