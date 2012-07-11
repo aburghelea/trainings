@@ -5,3 +5,25 @@ Uncle Bob [0]
 	Interface segregation principle
 	Dependency inversion principal
 [0] http://en.wikipedia.org/wiki/SOLID_(object-oriented_design)
+
+Late binding [1][2]
+[1] http://onlyjava.wordpress.com/2007/11/23/late-binding-vs-static-binding/
+[2] http://en.wikipedia.org/wiki/Late_binding
+
+
+Subiecte Spring
+
+1) DI/ IOC
+2) BeanFactory & ApplicationContext
+3) Bean Scoping
+4) Lifecycle of a "bean" in the container
+5) Lifecycle hooks
+6) BeanPostProcessors & BeanFactoryPostProcessors
+7) FactoryBean-s
+8) Resource API (Filesystem, Classpath, etc)
+9) Spring AOP Framework(sa vedem daca avem timp si de integrarea cu AspectJ)
+10) Transaction Management with Spring
+11) Spring Web / Web MVC
+
+
+DIC -> getBean("...") asamblata cu toate dependintele
