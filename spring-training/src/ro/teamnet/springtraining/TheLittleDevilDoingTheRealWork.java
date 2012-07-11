@@ -7,12 +7,14 @@ package ro.teamnet.springtraining;
  * Time: 10:06 AM
  * TNI
  */
-public class TheLittleDevilDoingTheRealWork {
+public class TheLittleDevilDoingTheRealWork implements Worker {
 
+    @Override
     public void doTheShit() {
         System.out.println("iceman: do the shit");
     }
 
+    @Override
     public void doTheShit(String s) {
         System.out.println(s);
     }

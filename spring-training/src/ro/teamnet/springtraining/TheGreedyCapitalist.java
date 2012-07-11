@@ -8,15 +8,19 @@ package ro.teamnet.springtraining;
  * TNI
  */
 public class TheGreedyCapitalist {
-    // package protect (without modifier)
-    TheLittleDevilDoingTheRealWork chineseDude;
+    /**
+     * package protect (without modifier)
+     * It's solid class
+     * TODO: refactor to interface (only if needed)
+     */
+    Worker chineseDude;
 
     public TheGreedyCapitalist() {
         // and now it's hardoded again;
         this.chineseDude = new TheLittleDevilDoingTheRealWork();
     }
 
-    public TheGreedyCapitalist(TheLittleDevilDoingTheRealWork chineseDude) {
+    public TheGreedyCapitalist(Worker chineseDude) {
         this.chineseDude = chineseDude;
     }
 
@@ -27,7 +31,7 @@ public class TheGreedyCapitalist {
 
     public static void main(String[] args) {
         new TheGreedyCapitalist(
-                new TheLittleDevilDoingTheRealWork()
+                Worker.NO_OP_WORKER
         ).doSomethingSchemency();
 
     }
