@@ -35,8 +35,10 @@ public class PresentingBeanFactoryHierarchies {
                 new ClassPathResource("capitalist-child-container.xml", PresentingBeanFactoryHierarchies.class);
 
         BeanFactory childFactory = new XmlBeanFactory(childResource, parrentFactory);
-        final TheGreedyCapitalist parrentBean = parrentFactory.getBean("duplicateDefinitionBothInParentAsInChild", TheGreedyCapitalist.class);
-        final TheGreedyCapitalist childBean = childFactory.getBean("duplicateDefinitionBothInParentAsInChild", TheGreedyCapitalist.class);
+        final TheGreedyCapitalist parrentBean =
+                parrentFactory.getBean("duplicateDefinitionBothInParentAsInChild", TheGreedyCapitalist.class);
+        final TheGreedyCapitalist childBean =
+                childFactory.getBean("duplicateDefinitionBothInParentAsInChild", TheGreedyCapitalist.class);
 
         System.out.println(parrentBean);
         System.out.println(childBean);

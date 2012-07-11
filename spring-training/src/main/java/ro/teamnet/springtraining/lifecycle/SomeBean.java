@@ -27,11 +27,6 @@ public class SomeBean implements InitializingBean, DisposableBean{
 //        }
     }
 
-    public static void main(String[] args) {
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("lifecycle.xml", SomeBean.class);
-
-    }
-
     public void doInit() {
         if("gogu".equalsIgnoreCase(this.name)){
             System.out.println("I'm the happiest Gogu ever ....");
@@ -45,5 +40,10 @@ public class SomeBean implements InitializingBean, DisposableBean{
 
     public void doDestory() {
         System.out.println("on destroy");
+    }
+
+    public static void main(String[] args) {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("lifecycle.xml", SomeBean.class);
+
     }
 }
