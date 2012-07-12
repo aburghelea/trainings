@@ -13,8 +13,4 @@
 
     <context:component-scan base-package="ro.teamnet.springtraining.beanpostprocessors"/>
 
-    <context:annotation-config>
-        <annotation></annotation>
-    </context:annotation-config>
-
 </beans>

@@ -29,13 +29,13 @@ public class ComponentScanning {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(basePackages);
         beanAcquiringByNameAndType(ctx);
         final BeanDependingOnSimpleBean bean = ctx.getBean(BeanDependingOnSimpleBean.class);
-        System.out.println(bean.getSingleBean());
+        System.out.println(bean.getSimpleBean());
     }
 
     private static void beanAcquiringByNameAndType(AnnotationConfigApplicationContext ctx) {
         try {
             ctx.getBean("gogu");
-            ctx.getBean(SingleBean.class);
+            ctx.getBean(SimpleBean.class);
         } catch (BeansException e) {
             System.out.println("This should be ok for now");
         }

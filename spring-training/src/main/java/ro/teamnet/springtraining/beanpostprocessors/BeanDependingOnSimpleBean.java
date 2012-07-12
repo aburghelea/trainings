@@ -3,8 +3,6 @@ package ro.teamnet.springtraining.beanpostprocessors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.inject.Inject;
-
 /**
  * Spring training by Gnomix
  * User: iceman
@@ -13,23 +11,24 @@ import javax.inject.Inject;
  * TNI
  */
 @Component
+@Cool
 public class BeanDependingOnSimpleBean {
 
-    private SingleBean singleBean;
+    private SimpleBean simpleBean;
 
     public BeanDependingOnSimpleBean() {
     }
     @Autowired
-    public BeanDependingOnSimpleBean(SingleBean singleBean) {
-        this.singleBean = singleBean;
+    public BeanDependingOnSimpleBean(SimpleBean simpleBean) {
+        this.simpleBean = simpleBean;
     }
 
 
-    public SingleBean getSingleBean() {
-        return singleBean;
+    public SimpleBean getSimpleBean() {
+        return simpleBean;
     }
 
-    public void setSingleBean(SingleBean singleBean) {
-        this.singleBean = singleBean;
+    public void setSimpleBean(SimpleBean simpleBean) {
+        this.simpleBean = simpleBean;
     }
 }

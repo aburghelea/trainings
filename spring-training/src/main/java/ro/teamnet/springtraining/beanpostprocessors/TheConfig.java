@@ -2,7 +2,6 @@ package ro.teamnet.springtraining.beanpostprocessors;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 
 /**
  * Spring training by Gnomix
@@ -16,7 +15,8 @@ import org.springframework.context.annotation.Import;
 public class TheConfig {
 
     @Bean
-    public SingleBean simpleBean(){
+    public SimpleBean simpleBean(){
 
+        return null;
     }
 }
