@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/teamnet/!svn/ver/8/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/lifecycle
+END
+SomeBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/teamnet/!svn/ver/8/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/lifecycle/SomeBean.java
+END
+lifecycle.xml
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/teamnet/!svn/ver/8/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/lifecycle/lifecycle.xml
+END

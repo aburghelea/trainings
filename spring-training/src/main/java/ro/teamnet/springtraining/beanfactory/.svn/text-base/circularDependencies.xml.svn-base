@@ -5,11 +5,14 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <description>
+        Configures the greedy capitalist
+        -- First steps in spring
+    </description>
     <bean id="dependencyOne" class="ro.teamnet.springtraining.beanfactory.DependencyOne"
-          c:dependencyTwo-ref="dependencyTwo" />
-
+          c:dependencyTwo-ref="dependencyTwo"/>
 
     <bean id="dependencyTwo" class="ro.teamnet.springtraining.beanfactory.DependencyTwo"
-          p:dependencyOne-ref="dependencyOne" depends-on="dependencyOne"/>
+            p:dependencyOne-ref="dependencyOne"  depends-on="dependencyOne"/>
 
 </beans>

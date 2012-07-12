@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/teamnet/!svn/ver/22/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/beanfactory
+END
+capitalists.xml
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/teamnet/!svn/ver/8/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/beanfactory/capitalists.xml
+END
+DependencyOne.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/teamnet/!svn/ver/8/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/beanfactory/DependencyOne.java
+END
+ShyIntroToBeanFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/teamnet/!svn/ver/8/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/beanfactory/ShyIntroToBeanFactory.java
+END
+capitalists-child-container.xml
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/teamnet/!svn/ver/8/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/beanfactory/capitalists-child-container.xml
+END
+DependencyResolution.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/teamnet/!svn/ver/8/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/beanfactory/DependencyResolution.java
+END
+PresentingBeanFactoryHierarchies.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/teamnet/!svn/ver/8/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/beanfactory/PresentingBeanFactoryHierarchies.java
+END
+BeanFactories.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/teamnet/!svn/ver/22/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/beanfactory/BeanFactories.java
+END
+DependencyTwo.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/teamnet/!svn/ver/8/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/beanfactory/DependencyTwo.java
+END
+circularDependencies.xml
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/teamnet/!svn/ver/8/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/beanfactory/circularDependencies.xml
+END

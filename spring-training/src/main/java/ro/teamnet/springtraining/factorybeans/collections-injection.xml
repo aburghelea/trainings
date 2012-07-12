@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <description>
+       working with collection injection
+    </description>
+
+<!--
+    <util:list id="theList" list-class="java.util.ArrayList" value-type="java.lang.String">
+          <value>Gogo</value>
+          <value>Gigle</value>
+    </util:list>
+-->
+
+<!--
+    <bean id="configForHumans" class="ro.teamnet.springtraining.factorybeans.ConfigureCollectionsWithSpring"
+            p:strings-ref="theList"/>
+-->
+
+    <util:map id="someMap" key-type="java.lang.String" value-type="java.lang.String">
+        <entry key="1" value="UNUNUNUNUNU"/>
+    </util:map>
+
+    <bean id="collections"
+          class="ro.teamnet.springtraining.factorybeans.ConfigureCollectionsWithSpring">
+        <description>THE VERBOSE WAY</description>
+        <property name="strings">
+
+            <util:list list-class="java.util.ArrayList" value-type="java.lang.String">
+                <value>Gogo</value>
+                <value>Gigle</value>
+            </util:list>
+        </property>
+
+        <property name="aMap" ref="someOtherMap"/>
+
+    </bean>
+
+    <bean id="someOtherMap" class="org.springframework.beans.factory.config.MapFactoryBean">
+        <property name="targetMapClass" value="java.util.LinkedHashMap"/>
+        <property name="sourceMap" ref="someMap"/>
+    </bean>
+
+</beans>

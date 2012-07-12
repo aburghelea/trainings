@@ -5,55 +5,38 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!--xmlns:c="http://www.springframework.org/schema/c" - Namespace pentru constructor-->
-    <!--xmlns:p="http://www.springframework.org/schema/p" - Namespace pentru parametri-->
-
-
     <description>
-        Bean Definition by XML
+        Configures the greedy capitalist
+        -- First steps in spring
     </description>
-    <!--
-        scope e default singleton
-        singleton => o singura instanta per bean-definition / per BeanFactory / per ClassLoaderul folosit
-        prototype => per getBean se furnizeaza o instanta noua
-        request => per request web se creaza;
-        session => per intreaga sesiune cu dezvoltator
-        globabalSession => portleti
-        CUSTOM => definit
-     -->
-    <bean id="capitalist" class="ro.teamnet.springtraining.TheGreedyCapitalist" c:chineseDude-ref="worker"
-          scope="prototype"/>
 
-    <!--Using setter injection-->
-    <!--Verbose setter injection-->
-    <bean id="capitalist_with_setter" class="ro.teamnet.springtraining.TheGreedyCapitalist">
-        <property name="chineseDude" ref="worker"/>
-    </bean>
-
-    <!--Light setter injection-->
-    <bean id="capitalist_with_light_setter" class="ro.teamnet.springtraining.TheGreedyCapitalist"
-          p:chineseDude-ref="worker"/>
-
-    <!--Light setter injection-->
-    <bean id="capitalist_mix" class="ro.teamnet.springtraining.TheGreedyCapitalist"
-          c:chineseDude-ref="worker">
-        <property name="chineseDude" ref="worker"/>
-    </bean>
-    <!-- Use case: multiple objects havin n constant properties and m that vary -->
-    <!-- Used as a configuration template -->
-    <bean id="capitalist_abstract" class="ro.teamnet.springtraining.TheGreedyCapitalist" abstract="true">
-        <property name="chineseDude" ref="worker"/>
-    </bean>
-
-    <!-- Use the above pattern and defines extra stuff -->
-    <bean id="capitalist_concret" parent="capitalist_abstract" p:country="ROMANIA"/>
-    <bean id="capitalist_concret2" parent="capitalist_abstract" p:country="CHINA" depends-on=""/>
-
-    <!-- Duplicate for hierarchy -->
     <bean id="duplicateDefinitionBothInParentAsInChild" class="ro.teamnet.springtraining.TheGreedyCapitalist"
-          c:chineseDude-ref="worker"/>
+          c:chineseDude-ref="worker" p:country="Cuba"/>
 
-    <!-- This is our chinese guy -->
+
+
+    <bean id="capitalist" class="ro.teamnet.springtraining.TheGreedyCapitalist"
+            c:chineseDude-ref="worker" scope="prototype"/><!--
+          <constructor-arg ref="worker"/>
+    </bean>-->
+
+    <!-- Using setter injection -->
+    <!-- Verbose setter injection -->
+    <bean id="capitalist2" class="ro.teamnet.springtraining.TheGreedyCapitalist" abstract="true" >
+        <property name="chineseDude" ref="worker"/>
+    </bean>
+
+    <bean id="capitalistChild" parent="capitalist2" />
+    <bean id="capitalistChild2" parent="capitalist2" p:country="Australia"/>
+
+    <!-- Light setter injection -->
+    <bean id="capitalist3" class="ro.teamnet.springtraining.TheGreedyCapitalist"
+            p:chineseDude-ref="worker"/>
+
+    <!-- Light setter injection -->
+    <bean id="capitalist4" class="ro.teamnet.springtraining.TheGreedyCapitalist"
+          p:chineseDude-ref="worker" c:chineseDude-ref="worker"/>
+
+
     <bean id="worker" class="ro.teamnet.springtraining.TheLittleDevilDoingTheRealWork"/>
-
 </beans>

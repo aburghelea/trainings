@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/teamnet/!svn/ver/22/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/awareness
+END
+SubclassForProvingMethodBridging.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/teamnet/!svn/ver/22/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/awareness/SubclassForProvingMethodBridging.java
+END
+bean-name.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/teamnet/!svn/ver/22/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/awareness/bean-name.xml
+END
+BeingContainerAware.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/teamnet/!svn/ver/22/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/awareness/BeingContainerAware.java
+END
+KnowingMyNameInContainer.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/teamnet/!svn/ver/22/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/awareness/KnowingMyNameInContainer.java
+END
+TheOneUnderTheBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/teamnet/!svn/ver/22/spring-training/branches/initial-commit/src/main/java/ro/teamnet/springtraining/awareness/TheOneUnderTheBridge.java
+END
