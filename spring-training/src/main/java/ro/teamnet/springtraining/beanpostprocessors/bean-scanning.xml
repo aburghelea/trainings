@@ -5,12 +5,16 @@
        xsi:schemaLocation=" http://www.springframework.org/schema/beans
                             http://www.springframework.org/schema/beans/spring-beans.xsd
                             http://www.springframework.org/schema/context
-                            http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+                            http://www.springframework.org/schema/context/spring-context.xsd">
 
     <description>
         introducing component scanning
     </description>
 
-    <context:component-scan base-package="ro.teamnet.springtraining.beanpostprocessors" />
+    <context:component-scan base-package="ro.teamnet.springtraining.beanpostprocessors"/>
+
+    <context:annotation-config>
+        <annotation></annotation>
+    </context:annotation-config>
 
 </beans>
