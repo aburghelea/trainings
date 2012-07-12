@@ -30,6 +30,8 @@ DIC -> getBean("...") asamblata cu toate dependintele
 
 //TODO: interfete package protected ???
 //TODO: Dependente circulare cu constructor
+//TODO: Read Autoproxy
+//TODO: Read Instantiation Autoawarepostprocessor
 
 getBean(Class) -> aduce beanul care e definit UNIC de tipul asta , arunca NoSuchBeanException
 
@@ -61,3 +63,6 @@ in doua XML-uri pot exista cu acelasi nume de bean, cel de al doilea suprascriin
 Cand cream resurse manual Factory-uri definim relativ la un pachet, cu application context se uita in classpath*
 
 AbstracApplicationContext e de baza. maj appCtx deriva din el.
+
+
+Un beanPostProcessor actioneaza asupra unei instante de bean
