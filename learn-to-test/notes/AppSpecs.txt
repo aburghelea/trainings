@@ -1,0 +1,15 @@
+Class:
+Player
+    String name;
+    Player(String name)
+
+Comportamente
+
+-nu au nici o pereche, high card e unic                            -> Castiga high card
+-nu au nici o pereche, au acelasi high card, second card diferit   -> Castiga highest second card
+-nu au nici o pereche, acelasi high card, acelasi second card      -> Egalitate
+-player one are pereche, player two are high card                  -> Castiga player one
+-player two are pereche, player one are high card                  -> Castiga player two
+-ambii au pereche, player one mai mare                             -> Castiga player one
+-ambii au pereche, player two mai mare                             -> Castiga player two
+-ambii au pereche, acceasi pereche                                 -> Egalitate

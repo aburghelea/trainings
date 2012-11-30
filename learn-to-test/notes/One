@@ -1,0 +1,9 @@
+Propriul framework de testare
+Needs:
+    AssertEquals(expected, actual)
+    main - run test
+    test methods
+
+
+Numele unui test trebuie sa descrie functionalitatea, nu implementare (CE , nu CUM).
+Un test se termina cu un singur assert.
